@@ -18,7 +18,7 @@ void spielfeldausgabe(int spielfeldzahl[24])
 {
     //2D-Array
     //Grundkonstrukt
-    char spielfeldfix [13] [13] =
+    char spielfeldfix [13][13] =
     {
         {'\0','-','-','-','-','-','\0','-','-','-','-','-','\0'},       
         {'|','n','n','n','n','n','|','n','n','n','n','n','|'},          
@@ -49,7 +49,7 @@ void spielfeldausgabe(int spielfeldzahl[24])
                     //gehoert das Feld Spieler1
                     if(spielfeldzahl[c]== 111){
                         printf("[\e[0;35m o\e[0m]");
-                    //gehört das Feld Spieler2
+                        //gehört das Feld Spieler2
                     }
                     else if(spielfeldzahl[c] == 222){ 
                         printf("[\e[0;36m o\e[0m]");                                        
@@ -60,9 +60,8 @@ void spielfeldausgabe(int spielfeldzahl[24])
                         printf("[0%d]", spielfeldzahl[c]);
                     }
                     else{
-                            printf("[%2.d]", spielfeldzahl[c]);
+                        printf("[%2.d]", spielfeldzahl[c]);
                     }
-                    
                     }
                     c++; 
                 }
@@ -74,16 +73,14 @@ void spielfeldausgabe(int spielfeldzahl[24])
                     if(spielfeldfix[i][j] == '-'){
                         printf("----");
                         }
-                        else{
-                             //Spielfeldfixausgabe
-                            printf(" %c  ",spielfeldfix [i] [j]);
+                    else{
+                        //Spielfeldfixausgabe
+                        printf(" %c  ",spielfeldfix [i][j]);
                         }
-               
                 }
             } 
             printf("\n");
         }      
-
 }
 
 //Spielsteinanzahl
@@ -105,5 +102,4 @@ int spielsteinanzaehler(int spielfeld[24], int spieler)
         }
     }
     return zaehler;
-
 }
